@@ -8,10 +8,15 @@ import org.testng.annotations.Test;
 
 import java.math.BigInteger;
 import java.util.*;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 import java.util.stream.StreamSupport;
 
+import static captify.test.java.TestAssignment.approximatesFor;
 import static captify.test.java.TestAssignment.sampleAfter;
 import static captify.test.java.TestAssignment.valueAt;
 import static org.testng.Assert.assertEquals;
@@ -91,4 +96,25 @@ public class TestAssignmentTest {
         LOGGER.info("[end] valueAt. [completed successfully]");
     }
 
+    @Test(enabled = true, singleThreaded = true)
+    public void approximatesForTest() {
+        int sparsityMin = 1, sparsityMax = 3, extent = 5000;
+        AtomicInteger executionExceptionCounter = new AtomicInteger(), otherExceptions = new AtomicInteger();
+        Map<Integer, Future<Double>> integerFutureMap = approximatesFor(sparsityMin, sparsityMax, extent);
+        integerFutureMap.entrySet().parallelStream().forEach(e -> {
+            try {
+                LOGGER.debug("key [{}], value [{}]", e.getKey(), e.getValue().get(1, TimeUnit.SECONDS));
+            }
+            catch (ExecutionException e1) {
+                executionExceptionCounter.incrementAndGet();
+                LOGGER.error(e1.getMessage(), e1);
+            }
+            catch (InterruptedException | TimeoutException e1) {
+                otherExceptions.incrementAndGet();
+                LOGGER.error(e1.getMessage(), e1);
+            }
+        });
+        assertEquals(executionExceptionCounter.get(), 1, "expect execution exception only for sparsity 1.");
+        assertEquals(otherExceptions.get(), 0, "there is should not be any non execution exceptions.");
+    }
 }
