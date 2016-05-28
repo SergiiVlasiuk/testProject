@@ -43,7 +43,7 @@ public class TestAssignment {
    * @return value at given position
    */
   public static BigInteger valueAt(Iterator<BigInteger> iterator, int position) {
-    throw new java.lang.UnsupportedOperationException("please implement this method");
+    return sampleAfter(iterator, position, 1).next();
   }
 
   /**
