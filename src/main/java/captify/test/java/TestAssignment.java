@@ -1,6 +1,7 @@
 package captify.test.java;
 
 import captify.test.utils.ExecutorServiceWrapper;
+import captify.test.utils.IteratorMergeHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,6 +10,7 @@ import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 import static captify.test.java.SparseIterators.*;
@@ -61,7 +63,19 @@ public class TestAssignment {
      * @return Iterator with all elements and ascending sorting retained
      */
     public static Iterator<BigInteger> mergeIterators(List<Iterator<BigInteger>> iterators) {
-        throw new java.lang.UnsupportedOperationException("please implement this method");
+/*
+        return iterators.stream()
+                .reduce((bigIntegerIterator, bigIntegerIterator2) ->
+                                Stream.<BigInteger>concat(
+                                        StreamSupport.stream(Spliterators.spliteratorUnknownSize(bigIntegerIterator, Spliterator.ORDERED), false)
+                                        , StreamSupport.stream(Spliterators.spliteratorUnknownSize(bigIntegerIterator2, Spliterator.ORDERED), false))
+                                        .sorted().iterator()
+                ).get();
+*/
+        return iterators.stream()
+                .reduce((bigIntegerIterator, bigIntegerIterator2) ->
+                                new IteratorMergeHelper<BigInteger>(bigIntegerIterator, bigIntegerIterator2).build().iterator()
+                ).get();
     }
 
     /**

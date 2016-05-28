@@ -16,9 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 import java.util.stream.StreamSupport;
 
-import static captify.test.java.TestAssignment.approximatesFor;
-import static captify.test.java.TestAssignment.sampleAfter;
-import static captify.test.java.TestAssignment.valueAt;
+import static captify.test.java.TestAssignment.*;
 import static org.testng.Assert.assertEquals;
 
 /**
@@ -33,11 +31,11 @@ public class TestAssignmentTest {
     public void init() {
         LOGGER.info("init test scope");
         bigIntegers.add(new BigInteger("1"));
-        bigIntegers.add(new BigInteger("2"));
-        bigIntegers.add(new BigInteger("3"));
+        bigIntegers.add(new BigInteger("22"));
+        bigIntegers.add(new BigInteger("13"));
         bigIntegers.add(new BigInteger("4"));
         bigIntegers.add(new BigInteger("5"));
-        bigIntegers.add(new BigInteger("6"));
+        bigIntegers.add(new BigInteger("62"));
         bigIntegers.add(new BigInteger("7"));
         bigIntegers.add(new BigInteger("8"));
         bigIntegers.add(new BigInteger("9"));
@@ -94,6 +92,31 @@ public class TestAssignmentTest {
         }, (m,u) ->{});
         collect.entrySet().stream().forEach(e -> LOGGER.debug("key [{}], value [{}]", e.getKey(), e.getValue()));
         LOGGER.info("[end] valueAt. [completed successfully]");
+    }
+
+    /**
+     * this test test nothing yet, but it is useful to check merge operation result.
+     */
+    @Test
+    public void mergeIteratorsTest() {
+        List<BigInteger> otherList = new LinkedList<>();
+        otherList.add(new BigInteger("0"));
+        otherList.add(new BigInteger("2"));
+        otherList.add(new BigInteger("8"));
+        otherList.add(new BigInteger("9"));
+        LOGGER.trace("first collection");
+        bigIntegers.stream().forEach(e -> LOGGER.trace("{}", e));
+        LOGGER.trace("second collection");
+        otherList.stream().forEach(e -> LOGGER.trace("{}", e));
+
+        List<Iterator<BigInteger>> iteratorList = new LinkedList<>();
+        iteratorList.add(bigIntegers.iterator());
+        iteratorList.add(otherList.iterator());
+
+        Iterator<BigInteger> result = mergeIterators(iteratorList);
+        LOGGER.trace("result:");
+        StreamSupport.stream(Spliterators.spliteratorUnknownSize(result, Spliterator.ORDERED), false)
+                .forEach(e -> LOGGER.trace("{}", e));
     }
 
     @Test(enabled = true, singleThreaded = true)
