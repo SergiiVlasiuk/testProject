@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 import static captify.test.java.SparseIterators.*;
 
@@ -25,7 +26,10 @@ public class TestAssignment {
    * @return sampleAfter(iteratorFromOne, 1, 2) should be same as to Seq[BigInt](2,3,4).toIterator
    */
   public static Iterator<BigInteger> sampleAfter(Iterator<BigInteger> iterator, int after, int sampleSize) {
-    throw new java.lang.UnsupportedOperationException("please implement this method");
+    return StreamSupport.stream(Spliterators.spliteratorUnknownSize(iterator, Spliterator.ORDERED), false)
+            .skip(after)
+            .limit(sampleSize)
+            .iterator();
   }
 
   /**
