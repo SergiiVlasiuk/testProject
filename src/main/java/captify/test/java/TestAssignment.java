@@ -63,19 +63,17 @@ public class TestAssignment {
      * @return Iterator with all elements and ascending sorting retained
      */
     public static Iterator<BigInteger> mergeIterators(List<Iterator<BigInteger>> iterators) {
-/*
-        return iterators.stream()
-                .reduce((bigIntegerIterator, bigIntegerIterator2) ->
-                                Stream.<BigInteger>concat(
-                                        StreamSupport.stream(Spliterators.spliteratorUnknownSize(bigIntegerIterator, Spliterator.ORDERED), false)
-                                        , StreamSupport.stream(Spliterators.spliteratorUnknownSize(bigIntegerIterator2, Spliterator.ORDERED), false))
-                                        .sorted().iterator()
-                ).get();
-*/
+/*   /// to be fixed because of permission issue.
         return iterators.stream()
                 .reduce((bigIntegerIterator, bigIntegerIterator2) ->
                                 new IteratorMergeHelper<BigInteger>(bigIntegerIterator, bigIntegerIterator2).build().iterator()
                 ).get();
+*/
+        // applied merge without saving order
+        return iterators.stream().reduce((bigIntegerIterator, bigIntegerIterator2) ->
+                        Stream.<BigInteger>concat(StreamSupport.stream(Spliterators.spliteratorUnknownSize(bigIntegerIterator, Spliterator.ORDERED), false)
+                                , StreamSupport.stream(Spliterators.spliteratorUnknownSize(bigIntegerIterator2, Spliterator.ORDERED), false)).iterator()
+        ).get();
     }
 
     /**

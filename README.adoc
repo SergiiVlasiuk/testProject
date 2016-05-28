@@ -1,0 +1,184 @@
+trace without merge (merge was not applied because of performance issue in my solution)
+
+2016-05-28 21:43:25 [main] INFO  captify.test.java.SparseIteratorsApp.main(85) - simple less loaded tests
+sampled merged iterator after 1000000 in 23 millis:
+2016-05-28 21:43:25 [main] INFO  captify.test.java.SparseIteratorsApp.runTests(40) - sampled merged iterator after 1000000 in 23 millis:
+2000002
+2000004
+2000007
+2000008
+2000011
+2000013
+2000014
+2000016
+2000019
+2000021
+2016-05-28 21:43:27 [pool-1-thread-2] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=3, extent=1000000
+2016-05-28 21:43:27 [pool-1-thread-1] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=2, extent=1000000
+2016-05-28 21:43:27 [pool-1-thread-4] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=5, extent=1000000
+2016-05-28 21:43:27 [pool-1-thread-3] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=4, extent=1000000
+approximate sparsities in 22 millis by 1000000 elems with 4 cores:
+2016-05-28 21:43:27 [pool-1-thread-5] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=6, extent=1000000
+2016-05-28 21:43:27 [pool-1-thread-6] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=7, extent=1000000
+2016-05-28 21:43:27 [main] INFO  captify.test.java.SparseIteratorsApp.runTests(51) - approximate sparsities in 22 millis by 1000000 elems with 4 cores.
+2016-05-28 21:43:27 [pool-1-thread-7] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=8, extent=1000000
+2016-05-28 21:43:27 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <2> with delay, because it was not calculated yet
+2016-05-28 21:43:29 [pool-1-thread-1] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=2, extent=1000000 with result=0.499999750000125
+2 -> 0.499999750000125
+2016-05-28 21:43:29 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 2 gives result -> 0.499999750000125
+2016-05-28 21:43:29 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <3> with delay, because it was not calculated yet
+2016-05-28 21:43:30 [pool-1-thread-2] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=3, extent=1000000 with result=0.33333300000033333
+3 -> 0.33333300000033333
+2016-05-28 21:43:30 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 3 gives result -> 0.33333300000033333
+2016-05-28 21:43:30 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <4> with delay, because it was not calculated yet
+2016-05-28 21:43:30 [pool-1-thread-3] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=4, extent=1000000 with result=0.2500263777828561
+4 -> 0.2500263777828561
+2016-05-28 21:43:30 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 4 gives result -> 0.2500263777828561
+2016-05-28 21:43:30 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <5> with delay, because it was not calculated yet
+2016-05-28 21:43:30 [pool-1-thread-5] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=6, extent=1000000 with result=0.17515797497763233
+2016-05-28 21:43:30 [pool-1-thread-4] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=5, extent=1000000 with result=0.20185533310873563
+5 -> 0.20185533310873563
+2016-05-28 21:43:30 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 5 gives result -> 0.20185533310873563
+6 -> 0.17515797497763233
+2016-05-28 21:43:30 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 6 gives result -> 0.17515797497763233
+2016-05-28 21:43:30 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <7> with delay, because it was not calculated yet
+2016-05-28 21:43:31 [pool-1-thread-6] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=7, extent=1000000 with result=0.12411635362039956
+7 -> 0.12411635362039956
+2016-05-28 21:43:31 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 7 gives result -> 0.12411635362039956
+2016-05-28 21:43:31 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <8> with delay, because it was not calculated yet
+2016-05-28 21:43:32 [pool-1-thread-7] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=8, extent=1000000 with result=0.08479267893226684
+8 -> 0.08479267893226684
+2016-05-28 21:43:32 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 8 gives result -> 0.08479267893226684
+2016-05-28 21:43:32 [main] INFO  captify.test.java.SparseIteratorsApp.main(89) - more intensive tests with just a bit of exceptions (should run in under 15 minutes)
+sampled merged iterator after 10000000 in 0 millis:
+2016-05-28 21:43:32 [main] INFO  captify.test.java.SparseIteratorsApp.runTests(40) - sampled merged iterator after 10000000 in 0 millis:
+20000003
+20000005
+20000006
+20000009
+20000010
+20000012
+20000015
+20000017
+20000018
+20000020
+2016-05-28 21:43:35 [pool-1-thread-9] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=1, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-8] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=0, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-10] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=2, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-12] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=4, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-13] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=5, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-14] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=6, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-11] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=3, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-15] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=7, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-16] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=8, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-17] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=9, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-18] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=10, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-19] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=11, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-21] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=13, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-22] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=14, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-23] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=15, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-25] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=17, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-24] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=16, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-26] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=18, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-20] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=12, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-27] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=19, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-28] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=20, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-30] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=22, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-29] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=21, extent=10000000
+2016-05-28 21:43:35 [pool-1-thread-31] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=23, extent=10000000
+approximate sparsities in 191 millis by 10000000 elems with 4 cores:
+2016-05-28 21:43:35 [main] INFO  captify.test.java.SparseIteratorsApp.runTests(51) - approximate sparsities in 191 millis by 10000000 elems with 4 cores.
+0 -> / by zero
+2016-05-28 21:43:35 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 0 gives result -> / by zero
+1 -> sparsity of 1 is not supported
+2016-05-28 21:43:35 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 1 gives result -> sparsity of 1 is not supported
+2016-05-28 21:43:35 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <2> with delay, because it was not calculated yet
+2016-05-28 21:43:35 [pool-1-thread-32] DEBUG captify.test.java.TestAssignment.approximateSparsity(87) - start calculating sparsity=24, extent=10000000
+2016-05-28 21:44:12 [pool-1-thread-10] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=2, extent=10000000 with result=0.5
+2 -> 0.5
+2016-05-28 21:44:12 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 2 gives result -> 0.5
+2016-05-28 21:44:12 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <3> with delay, because it was not calculated yet
+2016-05-28 21:44:27 [pool-1-thread-11] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=3, extent=10000000 with result=0.33333338888889813
+3 -> 0.33333338888889813
+2016-05-28 21:44:27 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 3 gives result -> 0.33333338888889813
+2016-05-28 21:44:27 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <4> with delay, because it was not calculated yet
+2016-05-28 21:44:42 [pool-1-thread-12] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=4, extent=10000000 with result=0.2500922089974574
+4 -> 0.2500922089974574
+2016-05-28 21:44:42 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 4 gives result -> 0.2500922089974574
+2016-05-28 21:44:42 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <5> with delay, because it was not calculated yet
+2016-05-28 21:44:54 [pool-1-thread-13] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=5, extent=10000000 with result=0.1980380254000799
+5 -> 0.1980380254000799
+2016-05-28 21:44:54 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 5 gives result -> 0.1980380254000799
+2016-05-28 21:44:54 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <6> with delay, because it was not calculated yet
+2016-05-28 21:45:05 [pool-1-thread-14] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=6, extent=10000000 with result=0.17317002061208123
+6 -> 0.17317002061208123
+2016-05-28 21:45:05 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 6 gives result -> 0.17317002061208123
+2016-05-28 21:45:05 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <7> with delay, because it was not calculated yet
+2016-05-28 21:45:11 [pool-1-thread-15] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=7, extent=10000000 with result=0.15491799570815185
+7 -> 0.15491799570815185
+2016-05-28 21:45:11 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 7 gives result -> 0.15491799570815185
+2016-05-28 21:45:11 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <8> with delay, because it was not calculated yet
+2016-05-28 21:45:11 [pool-1-thread-21] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=13, extent=10000000 with result=0.15757439059404427
+2016-05-28 21:45:15 [pool-1-thread-20] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=12, extent=10000000 with result=0.14467952407554813
+2016-05-28 21:45:17 [pool-1-thread-22] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=14, extent=10000000 with result=0.14204988351554426
+2016-05-28 21:45:32 [pool-1-thread-19] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=11, extent=10000000 with result=0.11628740324728154
+2016-05-28 21:45:34 [pool-1-thread-23] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=15, extent=10000000 with result=0.11501208328448195
+2016-05-28 21:45:44 [pool-1-thread-16] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=8, extent=10000000 with result=0.1032671591525678
+8 -> 0.1032671591525678
+2016-05-28 21:45:44 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 8 gives result -> 0.1032671591525678
+2016-05-28 21:45:44 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <9> with delay, because it was not calculated yet
+2016-05-28 21:45:52 [pool-1-thread-24] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=16, extent=10000000 with result=0.08757484354119284
+2016-05-28 21:46:10 [pool-1-thread-18] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=10, extent=10000000 with result=0.07143621459327423
+2016-05-28 21:46:15 [pool-1-thread-17] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=9, extent=10000000 with result=0.06998620718827354
+9 -> 0.06998620718827354
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 9 gives result -> 0.06998620718827354
+10 -> 0.07143621459327423
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 10 gives result -> 0.07143621459327423
+11 -> 0.11628740324728154
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 11 gives result -> 0.11628740324728154
+12 -> 0.14467952407554813
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 12 gives result -> 0.14467952407554813
+13 -> 0.15757439059404427
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 13 gives result -> 0.15757439059404427
+14 -> 0.14204988351554426
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 14 gives result -> 0.14204988351554426
+15 -> 0.11501208328448195
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 15 gives result -> 0.11501208328448195
+16 -> 0.08757484354119284
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 16 gives result -> 0.08757484354119284
+2016-05-28 21:46:15 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <17> with delay, because it was not calculated yet
+2016-05-28 21:46:26 [pool-1-thread-25] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=17, extent=10000000 with result=0.060963774977414904
+17 -> 0.060963774977414904
+2016-05-28 21:46:26 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 17 gives result -> 0.060963774977414904
+2016-05-28 21:46:26 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <18> with delay, because it was not calculated yet
+2016-05-28 21:46:58 [pool-1-thread-26] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=18, extent=10000000 with result=0.04185682273556462
+18 -> 0.04185682273556462
+2016-05-28 21:46:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 18 gives result -> 0.04185682273556462
+2016-05-28 21:46:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <19> with delay, because it was not calculated yet
+19 -> <incomplete>
+2016-05-28 21:47:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 19 gives result -> <incomplete>
+2016-05-28 21:47:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <20> with delay, because it was not calculated yet
+2016-05-28 21:48:05 [pool-1-thread-27] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=19, extent=10000000 with result=0.026130355543100784
+20 -> <incomplete>
+2016-05-28 21:48:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 20 gives result -> <incomplete>
+2016-05-28 21:48:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <21> with delay, because it was not calculated yet
+2016-05-28 21:49:09 [pool-1-thread-28] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=20, extent=10000000 with result=0.018629405986784656
+21 -> <incomplete>
+2016-05-28 21:49:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 21 gives result -> <incomplete>
+2016-05-28 21:49:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <22> with delay, because it was not calculated yet
+22 -> <incomplete>
+2016-05-28 21:50:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 22 gives result -> <incomplete>
+2016-05-28 21:50:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <23> with delay, because it was not calculated yet
+2016-05-28 21:51:23 [pool-1-thread-29] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=21, extent=10000000 with result=0.010291265569608084
+23 -> <incomplete>
+2016-05-28 21:51:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 23 gives result -> <incomplete>
+2016-05-28 21:51:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(56) - getting future result for <24> with delay, because it was not calculated yet
+24 -> <incomplete>
+2016-05-28 21:52:58 [main] INFO  captify.test.java.SparseIteratorsApp.lambda$runTests$4(62) - calculating 24 gives result -> <incomplete>
+2016-05-28 21:52:58 [main] INFO  captify.test.java.SparseIteratorsApp.main(92) - processing is finished.
+2016-05-28 21:53:39 [pool-1-thread-30] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=22, extent=10000000 with result=0.0062133264811940455
+2016-05-28 21:57:25 [pool-1-thread-31] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=23, extent=10000000 with result=0.003446775528223261
+2016-05-28 21:59:54 [pool-1-thread-32] DEBUG captify.test.java.TestAssignment.approximateSparsity(89) - finish calculating sparsity=24, extent=10000000 with result=0.002332971054579198
+
+Process finished with exit code 0
+
